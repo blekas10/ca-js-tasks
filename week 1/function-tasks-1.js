@@ -82,7 +82,12 @@ console.groupCollapsed(
   "5. Parašykite funkciją, kuri grąžina elementų kiekį masyve"
 );
 {
-  // ...sprendimas ir spausdinimas
+  function countLength(myArray) {
+    return myArray.length;
+  }
+  const numbers = [1, 2, 3, 4, 5];
+  const res1 = countLength(numbers);
+  console.log(res1);
 }
 console.groupEnd();
 
@@ -90,7 +95,16 @@ console.groupCollapsed(
   "6. Parašykite funkciją, kuri atspausdina paskutinio masyvo elemento indeksą"
 );
 {
-  // ...sprendimas ir spausdinimas
+  function lastIndexOfArray(myArray) {
+    for (let i = myArray.length - 1; i < myArray.length; i++) {
+      console.log(i, "is the last index number");
+    }
+
+    return myArray;
+  }
+  const numbers = [1, 2, 3, 4, 5, 77, 88];
+  const res1 = lastIndexOfArray(numbers);
+  console.log(res1);
 }
 console.groupEnd();
 
@@ -98,7 +112,16 @@ console.groupCollapsed(
   "7. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus eilutėmis"
 );
 {
-  // ...sprendimas ir spausdinimas
+  function lastIndexOfArray(myArray) {
+    for (let i = 0; i < myArray.length; i++) {
+      console.log(i);
+    }
+
+    return myArray;
+  }
+  const numbers = [1, 2, 3, 4, 5, 77, 33, 42];
+  const res1 = lastIndexOfArray(numbers);
+  console.log(res1);
 }
 console.groupEnd();
 
@@ -106,7 +129,16 @@ console.groupCollapsed(
   "8. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento reikšmes eilutėmis"
 );
 {
-  // ...sprendimas ir spausdinimas
+  function lastIndexOfArray(myArray) {
+    for (let i = 0; i < myArray.length; i++) {
+      console.log(myArray[i]);
+    }
+
+    return myArray;
+  }
+  const numbers = [1, 2, 3, 4, 5, 77, 33, 42];
+  const res1 = lastIndexOfArray(numbers);
+  console.log(res1);
 }
 console.groupEnd();
 
@@ -117,7 +149,16 @@ console.groupCollapsed(
 // [1] => reikšmė
 // [2] => reikšmė
 {
-  // ... sprendimas ir spausdinimas
+  function allElements(myArray) {
+    for (let i = 0; i < myArray.length; i++) {
+      console.log(i, "=>", myArray[i]);
+    }
+
+    return myArray;
+  }
+  const numbers = [1, 2, 3, 4, 5, 77, 33, 42];
+  const res1 = allElements(numbers);
+  console.log(res1);
 }
 console.groupEnd();
 
@@ -125,7 +166,16 @@ console.groupCollapsed(
   "10. Parašykite funkciją, kuri atspausdina masyvo elementus atbuline tvarka eilutėmis, iš galo."
 );
 {
-  // ...sprendimas ir spausdinimas
+  function arrayBackwards(myArray) {
+    for (let i = myArray.length - 1; i >= 0; i--) {
+      console.log(myArray[i]);
+    }
+
+    return myArray;
+  }
+  const numbers = [1, 2, 3, 4, 5, 77, 33, 42];
+  const res1 = arrayBackwards(numbers);
+  console.log(res1);
 }
 console.groupEnd();
 
@@ -133,7 +183,22 @@ console.groupCollapsed(
   "11. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus vienoje eilutėje: 0 1 2 3 ..."
 );
 {
-  // ...sprendimas ir spausdinimas
+  function printArrayOneLine(myArray) {
+    for (i = 0; i < myArray.length; i++) {
+      if (i == 0) {
+        console.log("[" + theArray[i]);
+      } else if (i == theArray.length - 1) {
+        console.log("," + theArray[i] + "]");
+      } else {
+        console.log("," + theArray[i]);
+      }
+    }
+
+    return myArray;
+  }
+  const numbers = [1, 2, 3, 4, 5, 77, 33, 42];
+  const res1 = numbers;
+  console.log(res1);
 }
 console.groupEnd();
 
