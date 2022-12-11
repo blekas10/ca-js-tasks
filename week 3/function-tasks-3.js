@@ -111,15 +111,15 @@ console.group(
 );
 {
   function getDoubleLetterCount(str) {
-    // code ...
+    return str.length;
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'labas': getDoubleLetterCount('labas'),
-  //   'kranas': getDoubleLetterCount('kranas'),
-  //   'kebabas': getDoubleLetterCount('kebabas'),
-  // })
-  // console.log('---');
+  //   labas: getDoubleLetterCount("labas"),
+  //   kranas: getDoubleLetterCount("kranas"),
+  //   kebabas: getDoubleLetterCount("kebabas"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -129,15 +129,15 @@ console.group(
 );
 {
   function getDoubleLetterCount(str) {
-    // code ...
+    return str.length * 2;
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'labas': getDoubleLetterCount('labas'),
-  //   'kranas': getDoubleLetterCount('kranas'),
-  //   'kebabas': getDoubleLetterCount('kebabas'),
-  // })
-  // console.log('---');
+  //   labas: getDoubleLetterCount("labas"),
+  //   kranas: getDoubleLetterCount("kranas"),
+  //   kebabas: getDoubleLetterCount("kebabas"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -147,15 +147,15 @@ console.group(
 );
 {
   function getArgsLetterSum(a, b) {
-    // code ...
+    return a.length + b.length;
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'labas, abc': getArgsLetterSum('labas', 'abc'),
-  //   'kranas, jonas': getArgsLetterSum('kranas', 'jonas'),
-  //   'kebabas, kefyras': getArgsLetterSum('kebabas', 'kefyras'),
-  // })
-  // console.log('---');
+  //   "labas, abc": getArgsLetterSum("labas", "abc"),
+  //   "kranas, jonas": getArgsLetterSum("kranas", "jonas"),
+  //   "kebabas, kefyras": getArgsLetterSum("kebabas", "kefyras"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -165,15 +165,19 @@ console.group(
 );
 {
   function containsLetterA(str) {
-    // code ...
+    if (str.indexOf("a") > 0) {
+      return "Yra a raidziu";
+    } else {
+      return "Nera a raidziu";
+    }
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'labas': containsLetterA('labas'),
-  //   'kempė': containsLetterA('kempė'),
-  //   'Finakolė': containsLetterA('Finakolė'),
-  // })
-  // console.log('---');
+  //   labas: containsLetterA("labas"),
+  //   kempė: containsLetterA("kempė"),
+  //   Finakolė: containsLetterA("Finakolė"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -183,15 +187,19 @@ console.group(
 );
 {
   function containsLetter(str, letter) {
-    // code ...
+    if (str.indexOf(letter) > 0) {
+      return "Yra pasirinktu raidziu raidziu";
+    } else {
+      return "Nera pasirinktu raidziu raidziu";
+    }
   }
-  // console.log('---');
-  // console.log({
-  //   'labas, a': containsLetter('labas', 'a'),
-  //   'kempė, a': containsLetter('kempė', 'a'),
-  //   'Finakolė, u': containsLetter('Finakolė', 'u'),
-  // })
-  // console.log('---');
+  console.log("---");
+  console.log({
+    "labas, a": containsLetter("labas", "a"),
+    "kempė, a": containsLetter("kempė", "a"),
+    "Finakolė, u": containsLetter("Finakolė", "u"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
