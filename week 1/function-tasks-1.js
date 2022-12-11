@@ -170,12 +170,9 @@ console.groupCollapsed(
     for (let i = myArray.length - 1; i >= 0; i--) {
       console.log(myArray[i]);
     }
-
-    return myArray;
   }
   const numbers = [1, 2, 3, 4, 5, 77, 33, 42];
-  const res1 = arrayBackwards(numbers);
-  console.log(res1);
+  arrayBackwards(numbers);
 }
 console.groupEnd();
 
@@ -183,22 +180,20 @@ console.groupCollapsed(
   "11. Parašykite funkciją, kuri atspausdina kiekvieno masyvo elemento indeksus vienoje eilutėje: 0 1 2 3 ..."
 );
 {
+  const numbers = [1, 2, 3, 4, 5, 77, 33, 42];
   function printArrayOneLine(myArray) {
-    for (i = 0; i < myArray.length; i++) {
-      if (i == 0) {
-        console.log("[" + theArray[i]);
-      } else if (i == theArray.length - 1) {
-        console.log("," + theArray[i] + "]");
+    for (let i = 0; i < myArray.length; i++) {
+      if (i === 0) {
+        console.log("[" + myArray[i]);
+      } else if (i === myArray.length - 1) {
+        console.log("," + myArray[i] + "]");
       } else {
-        console.log("," + theArray[i]);
+        console.log("," + myArray[i]);
       }
     }
-
-    return myArray;
   }
-  const numbers = [1, 2, 3, 4, 5, 77, 33, 42];
-  const res1 = numbers;
-  console.log(res1);
+
+  printArrayOneLine(numbers);
 }
 console.groupEnd();
 
