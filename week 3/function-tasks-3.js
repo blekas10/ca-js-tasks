@@ -716,14 +716,14 @@ console.group(
 );
 {
   function splitSentence(sentence) {
-    // code ...
+    return sentence.split(" ");
   }
-  // console.log('---');
-  // console.log({
-  //   'Labas aš Jonas': splitSentence('Labas aš Jonas'),
-  //   'Kėgliai yra gerai': splitSentence('Kėgliai yra gerai'),
-  // })
-  // console.log('---');
+  console.log("---");
+  console.log({
+    "Labas aš Jonas": splitSentence("Labas aš Jonas"),
+    "Kėgliai yra gerai": splitSentence("Kėgliai yra gerai"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
