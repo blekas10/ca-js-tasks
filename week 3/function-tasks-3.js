@@ -423,15 +423,22 @@ console.group(
 );
 {
   function indexesOfLetterA(str) {
-    // code ...
+    const letter = "a";
+    const indexArray = [];
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === letter) {
+        indexArray.push(i);
+      }
+    }
+    return indexArray;
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'labas': indexesOfLetterA('labas'),
-  //   'kempės': indexesOfLetterA('kempės'),
-  //   '123123': indexesOfLetterA('123123'),
-  // })
-  // console.log('---');
+  //   labas: indexesOfLetterA("labas"),
+  //   kempės: indexesOfLetterA("kempės"),
+  //   123123: indexesOfLetterA("123123"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -441,7 +448,13 @@ console.group(
 );
 {
   function indexesOfLetter(str, searchLetter) {
-    // code ...
+    const indexArray = [];
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === searchLetter) {
+        indexArray.push(i);
+      }
+    }
+    return indexArray;
   }
   // console.log('---');
   // console.log({
@@ -459,15 +472,17 @@ console.group(
 );
 {
   function removeFirstLetterA(str) {
-    // code ...
+    const letter = "a";
+    const index = str.indexOf(letter);
+    return index >= 0 ? str.slice(0, index) + str.slice(index + 1) : str;
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'labas': removeFirstLetterA('labas'),
-  //   'kempiniukas': removeFirstLetterA('kempiniukas'),
-  //   '123123': removeFirstLetterA('123123'),
-  // })
-  // console.log('---');
+  //   labas: removeFirstLetterA("labas"),
+  //   kempiniukas: removeFirstLetterA("kempiniukas"),
+  //   123123: removeFirstLetterA("123123"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -477,7 +492,9 @@ console.group(
 );
 {
   function removeLastLetterA(str) {
-    // code ...
+    const letter = "a";
+    const index = str.lastIndexOf(letter);
+    return index >= 0 ? str.slice(0, index) + str.slice(index + 1) : str;
   }
   // console.log('---');
   // console.log({
@@ -495,7 +512,11 @@ console.group(
 );
 {
   function removeAllOccurencesOfLetterA(str) {
-    // code ...
+    const letter = "a";
+    return str
+      .split("")
+      .filter((ch) => ch !== letter)
+      .join("");
   }
   // console.log('---');
   // console.log({
@@ -513,7 +534,10 @@ console.group(
 );
 {
   function removeAllOccurencesOfLetter(str, letter) {
-    // code ...
+    return str
+      .split("")
+      .filter((ch) => ch !== letter)
+      .join("");
   }
   // console.log('---');
   // console.log({
@@ -534,7 +558,11 @@ console.group(
 );
 {
   function filterLetters(str, lettersToRemove) {
-    // code ...
+    const newWord = str
+      .split("")
+      .filter((ch) => !lettersToRemove.includes(ch))
+      .join("");
+    return [newWord, lettersToRemove];
   }
   // console.log('---');
   // const str = filterLetters('Brangakmienio paveikslas', ['a', 'i']);
@@ -549,7 +577,7 @@ console.group(
 );
 {
   function replaceSpaceWithDash(str) {
-    // code ...
+    return str.replace(/ /g, "-");
   }
   // console.log('---');
   // console.log({
@@ -567,7 +595,10 @@ console.group(
 );
 {
   function capitalize(str) {
-    // code ...
+    return str
+      .split(" ")
+      .map((word) => word[0].toUpperCase() + word.slice(1))
+      .join("-");
   }
   // console.log('---');
   // console.log({
