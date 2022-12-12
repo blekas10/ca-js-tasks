@@ -334,13 +334,13 @@ console.group("15. Sukurkite funkciją, kuri grąžina 'a' raidžių kiekį žod
 
     return count;
   }
-  console.log("---");
-  console.log({
-    labas: letterACount("labas"),
-    kempės: letterACount("kempės"),
-    123123: letterACount("123123"),
-  });
-  console.log("---");
+  // console.log("---");
+  // console.log({
+  //   labas: letterACount("labas"),
+  //   kempės: letterACount("kempės"),
+  //   123123: letterACount("123123"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -350,15 +350,23 @@ console.group(
 );
 {
   function letterCount(str, searchLetter) {
-    // code ...
+    let count = 0;
+
+    for (let letter of str.toLowerCase()) {
+      if (searchLetter.includes(letter)) {
+        count++;
+      }
+    }
+
+    return count;
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'labas, a': letterCount('labas', 'a'),
-  //   'kempės, k': letterCount('kempės', 'k'),
-  //   '123123, z': letterCount('123123', 'z'),
-  // })
-  // console.log('---');
+  //   "labas, a": letterCount("labas", "a"),
+  //   "kempės, k": letterCount("kempės", "k"),
+  //   "123123, z": letterCount("123123", "z"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -368,15 +376,21 @@ console.group(
 );
 {
   function lastIndexOfLetterA(str) {
-    // code ...
+    const letter = "a";
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === letter) {
+        return i + 1;
+      }
+    }
+    return "Nera a raides";
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': lastIndexOfLetterA('labas'),
-  //   'kempės': lastIndexOfLetterA('kempės'),
-  //   '123123': lastIndexOfLetterA('123123'),
-  // })
-  // console.log('---');
+  console.log("---");
+  console.log({
+    labas: lastIndexOfLetterA("labas"),
+    kempės: lastIndexOfLetterA("kempės"),
+    123123: lastIndexOfLetterA("123123"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -386,7 +400,12 @@ console.group(
 );
 {
   function lastIndexOfLetter(str, searchLetter) {
-    // code ...
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === searchLetter) {
+        return i + 1;
+      }
+    }
+    return false;
   }
   // console.log('---');
   // console.log({
