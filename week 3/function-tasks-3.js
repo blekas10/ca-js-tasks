@@ -68,11 +68,11 @@ console.group(
     let lastLetter = str.slice(-1);
     return console.log(lastLetter);
   }
-  console.log("---");
-  printLastLetter("Labas");
-  printLastLetter("Ate");
-  printLastLetter("Brieda");
-  console.log("---");
+  // console.log("---");
+  // printLastLetter("Labas");
+  // printLastLetter("Ate");
+  // printLastLetter("Brieda");
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -97,11 +97,11 @@ console.group(
     console.log(result);
   }
 
-  console.log("---");
-  printMiddleLetter("Labas");
-  printMiddleLetter("Ate");
-  printMiddleLetter("Brieda");
-  console.log("---");
+  // console.log("---");
+  // printMiddleLetter("Labas");
+  // printMiddleLetter("Ate");
+  // printMiddleLetter("Brieda");
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -193,13 +193,13 @@ console.group(
       return "Nera pasirinktu raidziu raidziu";
     }
   }
-  console.log("---");
-  console.log({
-    "labas, a": containsLetter("labas", "a"),
-    "kempė, a": containsLetter("kempė", "a"),
-    "Finakolė, u": containsLetter("Finakolė", "u"),
-  });
-  console.log("---");
+  // console.log("---");
+  // console.log({
+  //   "labas, a": containsLetter("labas", "a"),
+  //   "kempė, a": containsLetter("kempė", "a"),
+  //   "Finakolė, u": containsLetter("Finakolė", "u"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -209,15 +209,20 @@ console.group(
 );
 {
   function isEvenNumberOfLetters(str) {
-    // code ...
+    const lenghtOfStr = str.length;
+    if (lenghtOfStr % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'labas': isEvenNumberOfLetters('labas'),
-  //   'kempės': isEvenNumberOfLetters('kempės'),
-  //   '123123': isEvenNumberOfLetters('123123'),
-  // })
-  // console.log('---');
+  //   labas: isEvenNumberOfLetters("labas"),
+  //   kempės: isEvenNumberOfLetters("kempės"),
+  //   123123: isEvenNumberOfLetters("123123"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -225,15 +230,25 @@ console.log();
 console.group("12. Sukurkite funkciją, kuri grąžina balsių kiekį žodyje");
 {
   function getNumberOfVowels(str) {
-    // code ...
+    const balsiai = ["a", "e", "i", "o", "u", "ą", "ę", "ė", "ų", "ū", "y"];
+
+    let count = 0;
+
+    for (let letter of str.toLowerCase()) {
+      if (balsiai.includes(letter)) {
+        count++;
+      }
+    }
+
+    return count;
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'aaaaa': getNumberOfVowels('aaaaa'),
-  //   'sasasasa': getNumberOfVowels('sasasasa'),
-  //   'aeyuioąčė': getNumberOfVowels('aeyuioąčė'),
-  // })
-  // console.log('---');
+  //   aaaaa: getNumberOfVowels("aaaaa"),
+  //   sasasasa: getNumberOfVowels("sasasasa"),
+  //   aeyuioąčė: getNumberOfVowels("aeyuioąčė"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -241,15 +256,46 @@ console.log();
 console.group("13. Sukurkite funkciją, kuri grąžina priebalsių kiekį žodyje");
 {
   function getNumberOfConsonants(str) {
-    // code ...
+    const priebalsiai = [
+      "b",
+      "c",
+      "č",
+      "d",
+      "f",
+      "g",
+      "h",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "p",
+      "r",
+      "s",
+      "š",
+      "t",
+      "v",
+      "z",
+      "ž",
+    ];
+
+    let count = 0;
+
+    for (let letter of str.toLowerCase()) {
+      if (priebalsiai.includes(letter)) {
+        count++;
+      }
+    }
+
+    return count;
   }
-  // console.log('---');
+  // console.log("---");
   // console.log({
-  //   'aaaaa': getNumberOfConsonants('aaaaa'),
-  //   'sasasasa': getNumberOfConsonants('sasasasa'),
-  //   'aeyuioąčė': getNumberOfConsonants('aeyuioąčė'),
-  // })
-  // console.log('---');
+  //   aaaaa: getNumberOfConsonants("aaaaa"),
+  //   sasasasa: getNumberOfConsonants("sasasasa"),
+  //   aeyuioąčė: getNumberOfConsonants("aeyuioąčė"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -259,16 +305,16 @@ console.group(
 );
 {
   function isOnlyLetters(str) {
-    // ... code
+    return /^[a-zA-Z]+$/.test(str);
   }
 
-  console.log("---");
-  console.log({
-    labas: isOnlyLetters("labas"),
-    kempės: isOnlyLetters("kempės"),
-    123123: isOnlyLetters("123123"),
-  });
-  console.log("---");
+  // console.log("---");
+  // console.log({
+  //   labas: isOnlyLetters("labas"),
+  //   kempės: isOnlyLetters("kempės"),
+  //   123123: isOnlyLetters("123123"),
+  // });
+  // console.log("---");
 }
 console.groupEnd();
 console.log();
@@ -276,15 +322,25 @@ console.log();
 console.group("15. Sukurkite funkciją, kuri grąžina 'a' raidžių kiekį žodyje");
 {
   function letterACount(str) {
-    // code ...
+    const letterA = ["a"];
+
+    let count = 0;
+
+    for (let letter of str.toLowerCase()) {
+      if (letterA.includes(letter)) {
+        count++;
+      }
+    }
+
+    return count;
   }
-  // console.log('---');
-  // console.log({
-  //   'labas': letterACount('labas'),
-  //   'kempės': letterACount('kempės'),
-  //   '123123': letterACount('123123'),
-  // })
-  // console.log('---');
+  console.log("---");
+  console.log({
+    labas: letterACount("labas"),
+    kempės: letterACount("kempės"),
+    123123: letterACount("123123"),
+  });
+  console.log("---");
 }
 console.groupEnd();
 console.log();
