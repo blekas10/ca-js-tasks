@@ -305,3 +305,47 @@ console.groupCollapsed(
   });
 }
 console.groupEnd();
+
+console.groupCollapsed(
+  "10. Atspausdinti visų Chemijos fakulteto studentų vidurkius"
+);
+{
+  students.forEach((student) => {
+    if (student.faculty === "Chemijos fakultetas") {
+      let totalMarks = 0;
+      let totalCredits = 0;
+      for (const module of student.modules) {
+        totalMarks += module.marks.reduce((a, b) => a + b);
+        totalCredits += module.credits;
+      }
+      console.log(
+        `${student.name} ${student.surname} Vidurkis yra ${
+          totalMarks / totalCredits
+        }`
+      );
+    }
+  });
+}
+console.groupEnd();
+
+console.groupCollapsed(
+  "11. Atspausdinti visų Elektros ir elektronikos fakulteto studentų vidurkius"
+);
+{
+  students.forEach((student) => {
+    if (student.faculty === "Elektros ir elektronikos fakultetas") {
+      let totalMarks = 0;
+      let totalCredits = 0;
+      for (const module of student.modules) {
+        totalMarks += module.marks.reduce((a, b) => a + b);
+        totalCredits += module.credits;
+      }
+      console.log(
+        `${student.name} ${student.surname} Vidurkis yra ${
+          totalMarks / totalCredits
+        }`
+      );
+    }
+  });
+}
+console.groupEnd();
