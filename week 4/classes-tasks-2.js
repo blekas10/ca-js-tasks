@@ -116,7 +116,6 @@ console.groupEnd();
 
 console.groupCollapsed("6. - https://edabit.com/challenge/qNMtrtizgssAQqP2b");
 {
-  // Padariau 6 uzduoti su solutions pagalba. Nesugebejau ismastyti teisingo sprendimo budo.
   class Name {
     constructor(fname, lname) {
       this.fname = fname.charAt(0).toUpperCase() + fname.slice(1).toLowerCase();
